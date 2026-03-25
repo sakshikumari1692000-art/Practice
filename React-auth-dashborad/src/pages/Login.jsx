@@ -16,7 +16,7 @@ const Login = () => {
 
         const res = await api.post('/login', {email, password});
         login(res.data);
-        navigate("/dashborad");
+        navigate("/dashboard");
     }
  
     return (
