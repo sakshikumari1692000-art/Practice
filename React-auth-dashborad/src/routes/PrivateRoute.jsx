@@ -1,8 +1,14 @@
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
-const PrivateRoute = ({ children }) => {
-    const { user } = useAuth();
-    return user ? children : <Navigate to= "/" />;
- }
+const PrivateRoute = ({ children, role }) => {
+    const token = localStorage.getItem("token");
+    const userRole = localStorage.getItem("role");
+  
+    if (!token) return <Navigate to="/" />;
+  
+    if (role && role !== userRole) {
+      return <p>Access Denied</p>;
+    }
+  
+    return children;
+  };
 
- export default PrivateRoute;
+  export default PrivateRoute;

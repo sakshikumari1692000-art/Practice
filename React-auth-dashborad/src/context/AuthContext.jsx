@@ -7,6 +7,7 @@ export const AuthProvider =({children}) =>{
     
     const login = (data) => {
       localStorage.setItem("token", data.token);
+      localStorage.setItem("role", "admin"); // demo purpose only, in real app, role should come from server
       setUser(data);
     };
 
