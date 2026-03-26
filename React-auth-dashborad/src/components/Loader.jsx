@@ -1,7 +1,7 @@
 const Loader = () =>{
     return (
-        <div style={style.container}>
-            <div style={style.spinner}></div>
+        <div style={styles.container}>
+            <div style={styles.spinner}></div>
         </div>
     )
 }

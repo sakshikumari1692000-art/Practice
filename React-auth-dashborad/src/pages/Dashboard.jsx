@@ -14,7 +14,7 @@ const Dashboard = () =>{
     const dispatch = useDispatch();
     const { users, loading, error } = useSelector((state) => state.user);
 
-    const [page, setPage] =  useState(1);
+    const [page, setPage] =  useState(2);
     const [search, setSearch] = useState("");
 
     const debouncedSearch = useDebounce(search);
